@@ -13,6 +13,7 @@ import { Faqs } from '@/pages/Faqs';
 import Logout from '@/components/authentication/Logout';
 import { LandingPage } from '@/pages/LandingPage';
 import ErrorPage from './components/ErrorPage';
+import SplashScreen from './components/SplashScreen'; // new import
 
 const router = createBrowserRouter([
     {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
                 path: '',
                 element: <AuthLayout />,
                 children: [
-                    { index: true, element: <Navigate to='/dashboard' /> },
+                    { index: true, element: <SplashScreen /> }, // Splash screen route
                     {
                         path: 'dashboard',
                         element: <Dashboard />
